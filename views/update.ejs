@@ -1,0 +1,87 @@
+<head>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-2">
+          <i class="fa fa-comments fa-2x"></i>
+        </h1>
+        <h1 class="text-center  mb-2">AttainU Chat</h1>
+        <h2 class="text-center mb-3">
+          <i class="fas fa-user-plus"></i> Update
+        </h2>
+        <%= include ('./partials/messages') %>
+        <form action="/users/update" method="POST" autocomplete="off">
+          <!-- <input type="hidden" name="_id" value="<%= user._id %>"> -->
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="name"
+              name="name"
+              class="form-control"
+              placeholder="Enter Name"
+              value="<%= user.name %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              placeholder="Enter Email"
+              value="<%= user.email %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <input
+              type="mobile"
+              name="mobile"
+              class="form-control"
+              placeholder="Enter Mobile Number"
+              value="<%= user.mobile %>"
+              minlength="10"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              placeholder="Create Password"
+              value="<%= user.password %>"
+            />
+          </div>
+          <!-- <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input
+              type="password"
+              id="password2"
+              name="password2"
+              class="form-control"
+              placeholder="Confirm Password"
+              value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+            />
+          </div> -->
+          <!-- <div>
+            <h6 class="text-center mt-4">
+              <form action="/users/avatar">
+                <label for="img">Select image:</label>
+                <input type="file" id="img" name="img">
+                <input type="submit">
+              </form>
+            </h6>
+          </div> -->
+          <button type="submit" class="btn btn-primary btn-block mt-3">
+            Update
+          </button>
+          <a href="/users/read" class="btn btn-block" style="background-color:rgb(0, 159, 207);color:white;width:auto;height:auto;">Go Back</a>
+          <a href="/dashboard" class="btn btn-info btn-block">Go To Dashboard <i class="fa fa-backward fa-1x"></i></a>
+      </div>
+    </div>
+  </div>
+</body>

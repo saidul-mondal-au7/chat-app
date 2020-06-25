@@ -1,0 +1,46 @@
+<head>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="row mt-5">
+    <div class="col-md-8 m-auto">
+  <div class="card card-body">
+    <h1 class="text-center mb-2">
+      <i class="fa fa-comments fa-2x"></i>
+    </h1>
+    <h1 class="text-center  mb-2">AttainU Chat</h1>
+    <h2 class="text-center mb-3">
+      <i></i> Your Account Details
+    </h2>
+    <div >
+      <p style="text-align:center;"><img class="avatar" src="/users/image" alt = ""></p>
+     </div>
+    <%- include ('./partials/messages') %>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile No.</th>
+            <th>Joining Date</th>
+            <th>Last updated</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.mobile %></td>
+            <td><%= user.createdAt %></td>
+            <td><%= user.updatedAt %></td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="/users/update" class="btn btn-block mt-2" style="background-color:rgb(62, 105, 248);color:white;width:auto;height:auto;">Update Account Details</a>
+      <a href="/users/avatar" class="btn btn-success btn-block mt-2">Upload Profile Picture</a>
+      <a href="/users/deleteImage" class="btn btn-block mt-2" style="background-color:rgb(167, 51, 235);color:white;width:auto;height:auto;">Remove Profile Picture</a>
+      <a href="/users/deleteconf" class="btn btn-primary btn-block">Delete Account <i class="fa fa-trash fa-1x"></i></a>
+      <a href="/dashboard" class="btn btn-info btn-block">Go To Dashboard <i class="fa fa-backward fa-1x"></i></a>
+      <p class="text-center mt-4">Made with <span style="color: #e25555;">&#9829;</span> in India</p>
+  </div>
+</body>
