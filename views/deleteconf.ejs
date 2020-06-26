@@ -3,17 +3,19 @@
 </head>
 <body>
   <div class="row mt-5">
-    <div class="col-md-6 m-auto">
-      <div class="card card-body">
-        <!-- <div class="centered-form__box3"> -->
+    <div class="col-md-4 m-auto">
+      <!-- <div class="card card-body"> -->
+        <div class="centered-form__box3">
         <h1 class="text-center mb-2">
           <i class="fa fa-comments fa-2x"></i>
         </h1>
         <h1 class="text-center mb-2">AttainU Chat</h1>
-        <i class="text-center fa fa-user-times fa-2x mt-4"></i><h2 class="text-center display-6 mt-2">Delete Confirmation</h2>
+        <h2 class="text-center mb-2">
+        <i class="text-center fa fa-user-times fa-1x mt-4 mb-2"></i>Delete Confirmation
+        </h2>
            <p class="text-center lead mb-4">Hey, <%= user.name %> Please Confirm To Delete Account</p>
-           <a href="/users/delete" class="btn btn-primary mb-2">Yes, Delete Account</a>
-           <a href="/users/read" class="btn btn-success mb-2">No</a>
+           <a href="/users/delete" class="btn btn-block mb-2" style="background-color:rgb(231, 54, 54);color:white;width:auto;height:auto;">Yes, Delete Account</a>
+           <a href="/users/read" class="btn btn-block mb-2" style="background-color:rgb(9, 122, 60);color:white;width:auto;height:auto;">No</a>
       </div>
     </div>
   </div>

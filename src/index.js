@@ -4,7 +4,7 @@ const Filter = require('bad-words');
 const { generateMessage, generateLocationMessage } = require('./utils/messages')
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./utils/users')
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 const server = app.listen(port, () => {
     console.log("Listening on port: " + port);
@@ -64,8 +64,3 @@ io.on('connection', (socket) => {
     })
 })
 
-// const port = process.env.PORT;
-
-// app.listen(port, console.log(`Server started on port ${port}`));
-
-//npm run dev
