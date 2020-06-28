@@ -15,39 +15,43 @@
 
             <div class="compose">
                 <form id="message-form">
-                    <input name="message" placeholder="Message" required autocomplete="off">
+                    <input name="message" placeholder="Type a message" required autocomplete="off">
                     <button>Send</button>
                 </form>
-                <button id="send-location">Send location</button>
+                <button id="send-location">Send My Location</button>
             </div>
         </div>
     </div>
     <script id="message-template" type="text/html">
-            <div class="message">
+            <div class="message-bubble">
                 <p>
                     <span class="message__name">{{username}}</span>
                     <span class="message__meta">{{createdAt}}</span>
                 </p>
-                <p><span class="textbox">{{message}}</span></p>
+                <p>{{message}}</p>
             </div>
+            <br>
         </script>
 
     <script id="location-message-template" type="text/html">
-            <div class="message">
+            <div class="message-bubble">
                 <p>
                     <span class="message__name">{{username}}</span>
                     <span class="message__meta">{{createdAt}}</span>
                 </p>
                 <p><a href="{{url}}" target="_blank">My Current Location</a></p>
             </div>
+            <br>
         </script>
 
     <script id="sidebar-template" type="text/html">
+        <h2><img src="/images/Icon/logo.png" alt="" width="40" height="40" style="vertical-align:middle"> AttainU Chat</h2>
+        <img class="portrait2 ml-2" src="/users/image" alt ="" style="vertical-align:middle"><a href="/dashboard"><button>Go To Dashboard</button></a>
         <h1 class="room-title">{{room}}</h1>
-        <h2 class="list-title">Users</h2>
+        <h2 class="list-title">Participants</h2>
         <ul class="users">
             {{#users}}
-            <li><b>{{username}}</b></li>
+            <li>{{username}}</li>
             {{/users}}
         </ul>
     </script>

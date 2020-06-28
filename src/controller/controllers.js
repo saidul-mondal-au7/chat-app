@@ -83,7 +83,7 @@ const userControll = {
             req.flash('success_msg', 'Your Details Have Been Updated!');
             res.redirect('/users/read')
         }catch(e){
-            res.status(400).send(e)
+          res.status(201).status(400).send(e)
         }
     },
     delete: async(req,res) => {
