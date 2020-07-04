@@ -9,8 +9,20 @@ const userControll = {
         const { name, email, mobile, password, password2 } = req.body;
         let errors = [];
       
+        if (!name || !email || !mobile || !password || !password2) {
+          errors.push({ msg: 'Please enter all fields' });
+        }
+
+        if (mobile < 10) {
+          errors.push({ msg: 'Mobile number must be at least 10 characters' });
+        }
+
         if (password != password2) {
           errors.push({ msg: 'Passwords do not match' });
+        }
+
+        if (password.length < 6) {
+          errors.push({ msg: 'Password must be at least 6 characters' });
         }
       
         if (errors.length > 0) {
